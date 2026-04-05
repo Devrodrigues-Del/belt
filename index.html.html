@@ -500,6 +500,95 @@ footer{
   letter-spacing:0.05em;
 }
 
+
+/* ── ORIGEM ── */
+.origem{
+  padding:120px 60px;
+  background:var(--black);
+  position:relative;
+  overflow:hidden;
+}
+.origem::before{
+  content:'';
+  position:absolute;
+  width:500px;height:500px;border-radius:50%;
+  background:radial-gradient(ellipse,rgba(201,148,58,0.06) 0%,transparent 70%);
+  left:-150px;top:50%;transform:translateY(-50%);
+}
+.origem-inner{
+  display:grid;
+  grid-template-columns:1fr 1.4fr;
+  gap:80px;
+  align-items:center;
+  max-width:1100px;
+  margin:0 auto;
+}
+.origem-deco{
+  display:flex;align-items:center;justify-content:center;
+  filter:drop-shadow(0 0 40px rgba(201,148,58,0.2));
+}
+.origem-text .section-label{justify-content:flex-start;}
+.origem-text .section-label::before{display:none;}
+.origem-text .section-label::after{display:none;}
+.origem-text .section-title{margin-bottom:28px;}
+
+.origem-quote{
+  border-left:2px solid var(--gold);
+  padding:16px 0 16px 24px;
+  margin:28px 0 28px;
+  position:relative;
+}
+.quote-mark{
+  font-family:'Cinzel',serif;
+  font-size:3rem;
+  color:var(--gold);
+  opacity:0.4;
+  line-height:0;
+  position:absolute;
+  top:28px;left:24px;
+}
+.origem-quote p{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.45rem;
+  font-style:italic;
+  color:var(--gold2);
+  line-height:1.5;
+  padding-left:28px;
+}
+.origem-p{
+  font-size:1.05rem;
+  color:rgba(245,239,224,0.65);
+  line-height:1.9;
+  font-weight:300;
+  margin-bottom:18px;
+}
+.origem-p strong{color:var(--gold2);font-weight:600;}
+
+.origem-tags{
+  display:flex;flex-wrap:wrap;gap:10px;margin-top:28px;
+}
+.tag{
+  font-family:'Cinzel',serif;
+  font-size:0.6rem;
+  letter-spacing:0.15em;
+  padding:8px 16px;
+  border:1px solid rgba(201,148,58,0.3);
+  color:var(--gold);
+  border-radius:2px;
+  background:rgba(201,148,58,0.05);
+}
+
+@media(max-width:900px){
+  .origem{padding:80px 24px;}
+  .origem-inner{grid-template-columns:1fr;gap:40px;}
+  .origem-deco{display:none;}
+}
+@media(max-width:580px){
+  .origem{padding:64px 20px;}
+  .origem-quote p{font-size:1.2rem;}
+  .origem-p{font-size:1rem;}
+}
+
 /* ── REVEAL ── */
 .reveal{
   opacity:0;transform:translateY(32px);
@@ -589,6 +678,7 @@ footer{
   <span class="nav-logo">Braids Belt</span>
   <ul class="nav-links">
     <li><a href="#servicos">Serviços</a></li>
+    <li><a href="#origem">Nossa História</a></li>
     <li><a href="#sobre">Sobre</a></li>
     <li><a href="#contato">Contato</a></li>
   </ul>
@@ -918,6 +1008,116 @@ footer{
         <div class="service-line"></div>
         <h3 class="service-name">Stitch Braids</h3>
         <p class="service-desc">Tranças coladas com repartições precisas e geométricas. Para quem quer algo diferente e marcante.</p>
+      </div>
+    </div>
+  
+    <div class="service-card reveal">
+      <div class="service-visual"><svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="bg7" cx="50%" cy="50%"><stop offset="0%" stop-color="#1a0f05"/><stop offset="100%" stop-color="#060404"/></radialGradient>
+    <linearGradient id="gn" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#E8C47A"/><stop offset="50%" stop-color="#C9943A"/><stop offset="100%" stop-color="#7B4A1E"/></linearGradient>
+  </defs>
+  <rect width="400" height="200" fill="url(#bg7)"/>
+  <!-- Nagô: tight cornrows flat to scalp, curved rows -->
+  <path d="M20,30 Q200,10 380,30" stroke="#C9943A" stroke-width="15" fill="none" stroke-linecap="round" opacity="0.9"/>
+  <path d="M20,30 Q200,10 380,30" stroke="url(#gn)" stroke-width="5" fill="none" stroke-linecap="round" opacity="0.7"/>
+  <path d="M20,62 Q200,42 380,62" stroke="#7B4A1E" stroke-width="15" fill="none" stroke-linecap="round" opacity="0.85"/>
+  <path d="M20,62 Q200,42 380,62" stroke="url(#gn)" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.6"/>
+  <path d="M20,94 Q200,74 380,94" stroke="#C9943A" stroke-width="15" fill="none" stroke-linecap="round" opacity="0.9"/>
+  <path d="M20,94 Q200,74 380,94" stroke="url(#gn)" stroke-width="5" fill="none" stroke-linecap="round" opacity="0.7"/>
+  <path d="M20,126 Q200,106 380,126" stroke="#7B4A1E" stroke-width="15" fill="none" stroke-linecap="round" opacity="0.85"/>
+  <path d="M20,126 Q200,106 380,126" stroke="url(#gn)" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.6"/>
+  <path d="M20,158 Q200,138 380,158" stroke="#C9943A" stroke-width="15" fill="none" stroke-linecap="round" opacity="0.9"/>
+  <path d="M20,158 Q200,138 380,158" stroke="url(#gn)" stroke-width="5" fill="none" stroke-linecap="round" opacity="0.7"/>
+  <path d="M20,188 Q200,172 380,188" stroke="#7B4A1E" stroke-width="12" fill="none" stroke-linecap="round" opacity="0.7"/>
+  <!-- stitch marks -->
+  <line x1="80" y1="22" x2="80" y2="38" stroke="#E8C47A" stroke-width="2" opacity="0.5"/>
+  <line x1="160" y1="16" x2="160" y2="30" stroke="#E8C47A" stroke-width="2" opacity="0.5"/>
+  <line x1="240" y1="16" x2="240" y2="30" stroke="#E8C47A" stroke-width="2" opacity="0.5"/>
+  <line x1="320" y1="22" x2="320" y2="38" stroke="#E8C47A" stroke-width="2" opacity="0.5"/>
+  <line x1="80" y1="54" x2="80" y2="70" stroke="#E8C47A" stroke-width="2" opacity="0.5"/>
+  <line x1="200" y1="48" x2="200" y2="62" stroke="#E8C47A" stroke-width="2" opacity="0.5"/>
+  <line x1="320" y1="54" x2="320" y2="70" stroke="#E8C47A" stroke-width="2" opacity="0.5"/>
+  <line x1="120" y1="86" x2="120" y2="102" stroke="#E8C47A" stroke-width="2" opacity="0.5"/>
+  <line x1="280" y1="86" x2="280" y2="102" stroke="#E8C47A" stroke-width="2" opacity="0.5"/>
+  <rect width="400" height="200" fill="url(#bg7)" opacity="0.28"/>
+  <text x="200" y="108" text-anchor="middle" font-family="Georgia,serif" font-size="11" fill="rgba(232,196,122,0.18)" letter-spacing="6">NAGÔ</text>
+</svg></div>
+      <div class="service-body">
+        <p class="service-num">07</p>
+        <div class="service-line"></div>
+        <h3 class="service-name">Trança Nagô</h3>
+        <p class="service-desc">Cornrows rasas e coladas ao couro cabeludo, com repartições simétricas e acabamento impecável. A trança que une raiz africana e praticidade do dia a dia.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ORIGEM -->
+<section class="origem" id="origem">
+  <div class="origem-inner">
+    <div class="origem-deco reveal">
+      <!-- martial arts + braid SVG illustration -->
+      <svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" width="320" height="320">
+        <defs>
+          <radialGradient id="obg" cx="50%" cy="50%">
+            <stop offset="0%" stop-color="#1e1008"/>
+            <stop offset="100%" stop-color="#060404"/>
+          </radialGradient>
+          <linearGradient id="og" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#E8C47A"/>
+            <stop offset="100%" stop-color="#C9943A"/>
+          </linearGradient>
+        </defs>
+        <circle cx="160" cy="160" r="150" fill="url(#obg)" stroke="rgba(201,148,58,0.2)" stroke-width="1"/>
+        <!-- outer ring decoration -->
+        <circle cx="160" cy="160" r="140" fill="none" stroke="rgba(201,148,58,0.08)" stroke-width="1" stroke-dasharray="6 4"/>
+        <!-- belt / faixa -->
+        <rect x="60" y="148" width="200" height="24" rx="4" fill="#C9943A" opacity="0.15"/>
+        <rect x="60" y="152" width="200" height="16" rx="3" fill="none" stroke="rgba(201,148,58,0.5)" stroke-width="1.5"/>
+        <!-- belt knot center -->
+        <rect x="140" y="148" width="40" height="24" rx="3" fill="rgba(201,148,58,0.3)" stroke="rgba(201,148,58,0.7)" stroke-width="1.5"/>
+        <line x1="155" y1="148" x2="155" y2="172" stroke="rgba(201,148,58,0.5)" stroke-width="1"/>
+        <line x1="165" y1="148" x2="165" y2="172" stroke="rgba(201,148,58,0.5)" stroke-width="1"/>
+        <!-- braid strands flowing from top -->
+        <path d="M130,10 Q118,60 130,110 Q142,160 130,210 Q118,260 130,310" stroke="url(#og)" stroke-width="10" fill="none" stroke-linecap="round" opacity="0.8"/>
+        <path d="M160,10 Q172,60 160,110 Q148,160 160,210 Q172,260 160,310" stroke="#7B4A1E" stroke-width="10" fill="none" stroke-linecap="round" opacity="0.7"/>
+        <path d="M190,10 Q178,60 190,110 Q202,160 190,210 Q178,260 190,310" stroke="url(#og)" stroke-width="10" fill="none" stroke-linecap="round" opacity="0.8"/>
+        <!-- shimmer -->
+        <path d="M130,10 Q118,60 130,110 Q142,160 130,210 Q118,260 130,310" stroke="rgba(245,239,224,0.12)" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <path d="M190,10 Q178,60 190,110 Q202,160 190,210 Q178,260 190,310" stroke="rgba(245,239,224,0.12)" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <!-- stars / sparks -->
+        <circle cx="80" cy="80" r="2" fill="#E8C47A" opacity="0.6"/>
+        <circle cx="240" cy="80" r="2" fill="#E8C47A" opacity="0.6"/>
+        <circle cx="70" cy="240" r="2" fill="#E8C47A" opacity="0.4"/>
+        <circle cx="250" cy="240" r="2" fill="#E8C47A" opacity="0.4"/>
+        <circle cx="160" cy="50" r="3" fill="#C9943A" opacity="0.5"/>
+        <circle cx="160" cy="270" r="3" fill="#C9943A" opacity="0.5"/>
+        <!-- Yin yang / circle symbol subtle -->
+        <circle cx="160" cy="160" r="18" fill="none" stroke="rgba(201,148,58,0.25)" stroke-width="1.5"/>
+        <circle cx="160" cy="160" r="4" fill="rgba(201,148,58,0.4)"/>
+      </svg>
+    </div>
+
+    <div class="origem-text">
+      <p class="section-label reveal">A origem</p>
+      <h2 class="section-title reveal">Das artes marciais<br>às tranças</h2>
+      <div class="origem-quote reveal">
+        <span class="quote-mark">"</span>
+        <p>Eu queria lutar com estilo —<br>sem bagunçar meu cabelo.</p>
+      </div>
+      <p class="origem-p reveal">
+        Foi nas artes marciais que tudo começou. O tatame exige foco, disciplina e movimento — e o cabelo solto simplesmente não combinava com essa energia. Foi então que as tranças entraram na minha vida: a solução perfeita para lutar com potência e ainda sair do treino com o visual impecável.
+      </p>
+      <p class="origem-p reveal">
+        O que era uma necessidade virou <strong>paixão</strong>. E a paixão virou arte. Hoje, cada trança que faço carrega essa mesma filosofia: <strong>força, precisão e estilo</strong> — dentro e fora do tatame.
+      </p>
+      <div class="origem-tags reveal">
+        <span class="tag">🥋 Artes Marciais</span>
+        <span class="tag">✦ Disciplina</span>
+        <span class="tag">🌿 Trança Nagô</span>
+        <span class="tag">💛 Identidade</span>
       </div>
     </div>
   </div>
